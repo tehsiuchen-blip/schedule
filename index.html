@@ -8,7 +8,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ethan老師 照亮心靈角落">
 <meta property="og:title" content="開課行程|Ethan老師 照亮心靈角落">
-<meta property="og:description" content="近期開課:NGH 催眠師資班、影響力工作坊、說服力課程…點進來看日期與報名方式。">
+<meta property="og:description" content="近期開課:NGH 催眠證照班、說服力及影響力、免費公開講座…點進來看日期與報名連結。">
 <meta property="og:url" content="https://tehsiuchen-blip.github.io/schedule/">
 <meta property="og:image" content="https://tehsiuchen-blip.github.io/schedule/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -45,6 +45,12 @@
   .tag.open{background:#E8F0E6; color:#4F7A52; border:1px solid #9FC39A}
   .tag.full{background:#F3E8E6; color:#9A5B4F; border:1px solid #D8A79C}
   .tag.closed{background:#ECEAE2; color:#6B7A78; border:1px solid #C9C4B4}
+  .book{
+    display:block; text-align:center; text-decoration:none;
+    font-size:14px; font-weight:700; letter-spacing:.08em;
+    color:#263334; background:#D9A75D; border-radius:999px;
+    padding:9px 14px; margin-top:12px;
+  }
   .empty{
     text-align:center; color:#6B7A78; font-size:14.5px; padding:36px 10px;
     background:#fff; border:1px dashed #BDB8AB; border-radius:14px;
@@ -79,17 +85,39 @@
 var COURSES = [
   {from:"2026-08-22", to:"2026-08-22", name:"我的時間,我作主|數位生存訓練營",
    place:"高雄", status:"open",
-   desc:"給青少年的一日課:看見自己與手機的關係,把時間的主導權拿回來。"},
+   desc:"給青少年的一日課:看見自己與手機的關係,把時間的主導權拿回來。詳情請私訊粉專。"},
   {from:"2026-08-28", to:"2026-09-30", when:"8/28(五)開課・週末班,共 8 天",
-   name:"NGH 催眠師資班",
-   place:"", status:"open",
-   desc:"NGH 國際催眠師認證課程,週末上課、共八天完整班。詳情與報名方式請私訊粉專。"},
+   name:"NGH 催眠師證照班",
+   place:"台中・生命源點身心整合學苑", status:"open",
+   link:"https://www.lifesource888.com/article.php?lang=tw&tb=13&cid=185",
+   desc:"NGH 國際催眠證照課程,週末上課、共八天完整班。"},
   {from:"2026-09-12", to:"2026-09-12", name:"影響力工作坊",
    place:"高雄", status:"open",
    desc:"一天的影響力課:讓你說的話,真的進到別人心裡。詳情請私訊粉專。"},
-  {from:"2026-09-13", to:"2026-09-13", name:"說服力課程",
-   place:"中國文化大學推廣教育部", status:"open",
-   desc:"詳情與報名方式請私訊粉專。"}
+  {from:"2026-09-13", to:"2026-09-13", name:"催眠的語言奧秘|說服力及影響力課程",
+   place:"文化大學推廣部・台中分部", status:"open",
+   link:"https://taichung.sce.pccu.edu.tw/courses/3FY5B5090",
+   desc:"一天的說服力與影響力課:把催眠的語言奧秘,用進生活與工作。已確定開班。"},
+  {from:"2026-10-03", to:"2026-10-03", when:"10/3(六)18:00–19:00",
+   name:"免費公開講座|停止內耗,開始創收",
+   place:"文化大學推廣部・台中分部", status:"open",
+   link:"https://taichung.sce.pccu.edu.tw/courses/0F01B510C",
+   desc:"NGH 催眠證照 × AI 整合班前導講座。免費入場,請提前預約。"},
+  {from:"2026-10-17", to:"2026-10-17", when:"10/17(六)18:00–19:00",
+   name:"免費公開講座|從自我安頓到助人創收",
+   place:"文化大學推廣部・台中分部", status:"open",
+   link:"https://taichung.sce.pccu.edu.tw/courses/0F01B510D",
+   desc:"NGH 催眠證照 × AI 整合班前導講座。免費入場,請提前預約。"},
+  {from:"2026-11-01", to:"2026-12-13", when:"11/1(日)開課・週日班,至 12/13",
+   name:"NGH 國際催眠師專業認證班|AI 協作・實作接案",
+   place:"文化大學推廣部・台中分部", status:"open",
+   link:"https://taichung.sce.pccu.edu.tw/courses/3FFRB5110",
+   desc:"國際證照 × AI 共學 × 督導接案。10/8 前報名享早鳥優惠。"},
+  {from:"2026-12-12", to:"2026-12-12", when:"12/12(六)10:00–17:00",
+   name:"從拖延到啟動實作營|即刻改變",
+   place:"文化大學推廣部・台中分部", status:"open",
+   link:"https://taichung.sce.pccu.edu.tw/courses/3FGQB5120",
+   desc:"和卡關的自己重新合作,一天把「想做」變成「開始做」。11/15 前報名享早鳥優惠。"}
 ];
 
 function fmt(d){
@@ -117,6 +145,7 @@ function render(){
       + "<div class='cname'>" + c.name + tag + "</div>"
       + (c.place ? "<div class='meta'>📍 " + c.place + "</div>" : "")
       + (c.desc ? "<div class='desc'>" + c.desc + "</div>" : "")
+      + (c.link ? "<a class='book' href='" + c.link + "' target='_blank' rel='noopener'>報名・課程詳情</a>" : "")
       + "</div>";
   }
   if (!shown) html = "<div class='empty'>近期課程籌備中——<br>追蹤粉專,開課第一時間通知你。</div>";
