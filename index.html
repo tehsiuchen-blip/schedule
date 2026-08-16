@@ -78,14 +78,12 @@
    status: open=報名中 / full=額滿 / closed=包班(不公開招生) */
 var COURSES = [
   {from:"2026-08-22", to:"2026-08-22", name:"我的時間,我作主|數位生存訓練營",
-   place:"高雄", status:"closed",
-   desc:"給青少年的一日課:看見自己與手機的關係,把時間的主導權拿回來。本梯為協會包班。"},
-  {from:"2026-08-28", to:"2026-08-30", name:"NGH 催眠師資班(三日)",
+   place:"高雄", status:"open",
+   desc:"給青少年的一日課:看見自己與手機的關係,把時間的主導權拿回來。"},
+  {from:"2026-08-28", to:"2026-09-30", when:"8/28(五)開課・週末班,共 8 天",
+   name:"NGH 催眠師資班",
    place:"", status:"open",
-   desc:"NGH 國際催眠師認證系統課程。詳情與報名方式請私訊粉專。"},
-  {from:"2026-09-04", to:"2026-09-06", name:"NGH 催眠師資班(三日)第二梯",
-   place:"", status:"open",
-   desc:"NGH 國際催眠師認證系統課程。詳情與報名方式請私訊粉專。"},
+   desc:"NGH 國際催眠師認證課程,週末上課、共八天完整班。詳情與報名方式請私訊粉專。"},
   {from:"2026-09-12", to:"2026-09-12", name:"影響力工作坊",
    place:"高雄", status:"open",
    desc:"一天的影響力課:讓你說的話,真的進到別人心裡。詳情請私訊粉專。"},
@@ -109,7 +107,7 @@ function render(){
     var end = new Date(c.to + "T23:59:59+08:00");
     if (end < today) continue; /* 過期自動消失 */
     shown++;
-    var when = fmt(c.from) + (c.to !== c.from ? " – " + fmt(c.to) : "");
+    var when = c.when ? c.when : (fmt(c.from) + (c.to !== c.from ? " – " + fmt(c.to) : ""));
     var year = c.from.slice(0,4);
     var tag = c.status === "open" ? "<span class='tag open'>報名中</span>"
             : c.status === "full" ? "<span class='tag full'>已額滿</span>"
