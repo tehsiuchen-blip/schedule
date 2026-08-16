@@ -80,49 +80,22 @@
 </footer>
 
 <script>
-/* 行程資料:來源=Ethan 的教學日曆(照亮角落的地圖),粉絲版文案由小編室維護。
+/* 行程資料由 courses.json 產生——不要手改這一段!
+   改行程 = 編輯 courses.json 後跑 schedule_update.py --sync(小編室的龍蝦會做)。
    status: open=報名中 / full=額滿 / closed=包班(不公開招生) */
+/* COURSES:BEGIN */
 var COURSES = [
-  {from:"2026-08-22", to:"2026-08-22", when:"8/22(六)09:30–17:30",
-   name:"我的時間,我作主|數位生存訓練營",
-   place:"高雄・苓雅區大順三路40號(高雄EQ協會)", status:"open",
-   link:"https://www.beclass.com/rid=30527786a6801761fb53",
-   desc:"給青少年的一日課:看見自己與手機的關係,把時間的主導權拿回來。"},
-  {from:"2026-08-28", to:"2026-09-20", when:"8/28 開課・共 8 天(8/28–30・9/4–6・9/19–20)",
-   name:"NGH 催眠師證照班",
-   place:"台中・生命源點身心整合學苑", status:"open",
-   link:"https://www.lifesource888.com/article.php?lang=tw&tb=13&cid=185",
-   desc:"NGH 國際催眠證照課程,三個週末共八天(9:30–17:30),精緻小班 12 人額滿。"},
-  {from:"2026-09-12", to:"2026-09-12", when:"9/12(六)09:30–17:30",
-   name:"催眠與影響力—掌握心靈的力量 工作坊",
-   place:"高雄・苓雅區大順三路40號(高雄EQ協會)", status:"open",
-   link:"https://www.beclass.com/rid=30527786a681f57c4cc7",
-   desc:"一天的影響力課:讓你說的話,真的進到別人心裡。"},
-  {from:"2026-09-13", to:"2026-09-13", name:"催眠的語言奧秘|說服力及影響力課程",
-   place:"文化大學推廣部・台中分部", status:"open",
-   link:"https://taichung.sce.pccu.edu.tw/courses/3FY5B5090",
-   desc:"一天的說服力與影響力課:把催眠的語言奧秘,用進生活與工作。已確定開班。"},
-  {from:"2026-10-03", to:"2026-10-03", when:"10/3(六)18:00–19:00",
-   name:"免費公開講座|停止內耗,開始創收",
-   place:"文化大學推廣部・台中分部", status:"open",
-   link:"https://taichung.sce.pccu.edu.tw/courses/0F01B510C",
-   desc:"NGH 催眠證照 × AI 整合班前導講座。免費入場,請提前預約。"},
-  {from:"2026-10-17", to:"2026-10-17", when:"10/17(六)18:00–19:00",
-   name:"免費公開講座|從自我安頓到助人創收",
-   place:"文化大學推廣部・台中分部", status:"open",
-   link:"https://taichung.sce.pccu.edu.tw/courses/0F01B510D",
-   desc:"NGH 催眠證照 × AI 整合班前導講座。免費入場,請提前預約。"},
-  {from:"2026-11-01", to:"2026-12-13", when:"11/1(日)開課・週日班,至 12/13",
-   name:"NGH 國際催眠師專業認證班|AI 協作・實作接案",
-   place:"文化大學推廣部・台中分部", status:"open",
-   link:"https://taichung.sce.pccu.edu.tw/courses/3FFRB5110",
-   desc:"國際證照 × AI 共學 × 督導接案。10/8 前報名享早鳥優惠。"},
-  {from:"2026-12-12", to:"2026-12-12", when:"12/12(六)10:00–17:00",
-   name:"從拖延到啟動實作營|即刻改變",
-   place:"文化大學推廣部・台中分部", status:"open",
-   link:"https://taichung.sce.pccu.edu.tw/courses/3FGQB5120",
-   desc:"和卡關的自己重新合作,一天把「想做」變成「開始做」。11/15 前報名享早鳥優惠。"}
+  {from:"2026-08-22", to:"2026-08-22", when:"8/22(六)09:30–17:30", name:"我的時間,我作主|數位生存訓練營", place:"高雄・苓雅區大順三路40號(高雄EQ協會)", status:"open", link:"https://www.beclass.com/rid=30527786a6801761fb53", desc:"給青少年的一日課:看見自己與手機的關係,把時間的主導權拿回來。"},
+  {from:"2026-08-28", to:"2026-09-20", when:"8/28 開課・共 8 天(8/28–30・9/4–6・9/19–20)", name:"NGH 催眠師證照班", place:"台中・生命源點身心整合學苑", status:"open", link:"https://www.lifesource888.com/article.php?lang=tw&tb=13&cid=185", desc:"NGH 國際催眠證照課程,三個週末共八天(9:30–17:30),精緻小班 12 人額滿。"},
+  {from:"2026-09-12", to:"2026-09-12", when:"9/12(六)09:30–17:30", name:"催眠與影響力—掌握心靈的力量 工作坊", place:"高雄・苓雅區大順三路40號(高雄EQ協會)", status:"open", link:"https://www.beclass.com/rid=30527786a681f57c4cc7", desc:"一天的影響力課:讓你說的話,真的進到別人心裡。"},
+  {from:"2026-09-13", to:"2026-09-13", name:"催眠的語言奧秘|說服力及影響力課程", place:"文化大學推廣部・台中分部", status:"open", link:"https://taichung.sce.pccu.edu.tw/courses/3FY5B5090", desc:"一天的說服力與影響力課:把催眠的語言奧秘,用進生活與工作。已確定開班。"},
+  {from:"2026-10-03", to:"2026-10-03", when:"10/3(六)18:00–19:00", name:"免費公開講座|停止內耗,開始創收", place:"文化大學推廣部・台中分部", status:"open", link:"https://taichung.sce.pccu.edu.tw/courses/0F01B510C", desc:"NGH 催眠證照 × AI 整合班前導講座。免費入場,請提前預約。"},
+  {from:"2026-10-17", to:"2026-10-17", when:"10/17(六)18:00–19:00", name:"免費公開講座|從自我安頓到助人創收", place:"文化大學推廣部・台中分部", status:"open", link:"https://taichung.sce.pccu.edu.tw/courses/0F01B510D", desc:"NGH 催眠證照 × AI 整合班前導講座。免費入場,請提前預約。"},
+  {from:"2026-11-01", to:"2026-12-13", when:"11/1(日)開課・週日班,至 12/13", name:"NGH 國際催眠師專業認證班|AI 協作・實作接案", place:"文化大學推廣部・台中分部", status:"open", link:"https://taichung.sce.pccu.edu.tw/courses/3FFRB5110", desc:"國際證照 × AI 共學 × 督導接案。10/8 前報名享早鳥優惠。"},
+  {from:"2026-12-12", to:"2026-12-12", when:"12/12(六)10:00–17:00", name:"從拖延到啟動實作營|即刻改變", place:"文化大學推廣部・台中分部", status:"open", link:"https://taichung.sce.pccu.edu.tw/courses/3FGQB5120", desc:"和卡關的自己重新合作,一天把「想做」變成「開始做」。11/15 前報名享早鳥優惠。"}
 ];
+/* data-rev:74cd71b8 */
+/* COURSES:END */
 
 function fmt(d){
   var p = d.split("-");
