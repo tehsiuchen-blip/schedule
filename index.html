@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>開課行程|Ethan老師 照亮心靈角落</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Ethan 老師近期開課行程:催眠證照、工作坊與公開課。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ethan老師 照亮心靈角落">
+<meta property="og:title" content="開課行程|Ethan老師 照亮心靈角落">
+<meta property="og:description" content="近期開課:NGH 催眠師資班、影響力工作坊、說服力課程…點進來看日期與報名方式。">
+<meta property="og:url" content="https://tehsiuchen-blip.github.io/schedule/">
+<meta property="og:image" content="https://tehsiuchen-blip.github.io/schedule/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  /* 相容性紀律:不用 aspect-ratio / inset / flex-gap(iOS 12+ 全通) */
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    background:#F4F2EC; color:#263334;
+    font-family:"Microsoft JhengHei","PingFang TC","Noto Sans TC","Heiti TC",sans-serif;
+    line-height:1.75;
+  }
+  #wrap{max-width:520px; margin:0 auto; padding:26px 20px 30px}
+  h1{font-size:28px; letter-spacing:.2em; font-weight:700; text-align:center; margin-top:8px}
+  .sub{font-size:12px; letter-spacing:.3em; color:#435554; text-align:center; margin-top:8px}
+  .rule{width:44px; height:2px; background:#D9A75D; margin:20px auto 26px}
+
+  .card{
+    background:#fff; border:1px solid #BDB8AB; border-radius:14px;
+    padding:18px 20px 16px; margin-bottom:14px; position:relative; overflow:hidden;
+  }
+  .card::before{content:""; position:absolute; left:0; top:0; bottom:0; width:6px; background:#D9A75D}
+  .when{font-size:13px; letter-spacing:.08em; color:#8b6a34; font-weight:700}
+  .cname{font-size:19px; font-weight:700; letter-spacing:.06em; margin-top:4px; line-height:1.5}
+  .meta{font-size:13.5px; color:#435554; margin-top:6px}
+  .desc{font-size:14px; color:#435554; margin-top:8px; border-top:1px dashed #E0DCCE; padding-top:8px}
+  .tag{
+    display:inline-block; font-size:11.5px; letter-spacing:.1em; border-radius:999px;
+    padding:2px 10px; margin-left:6px; vertical-align:2px;
+  }
+  .tag.open{background:#E8F0E6; color:#4F7A52; border:1px solid #9FC39A}
+  .tag.full{background:#F3E8E6; color:#9A5B4F; border:1px solid #D8A79C}
+  .tag.closed{background:#ECEAE2; color:#6B7A78; border:1px solid #C9C4B4}
+  .empty{
+    text-align:center; color:#6B7A78; font-size:14.5px; padding:36px 10px;
+    background:#fff; border:1px dashed #BDB8AB; border-radius:14px;
+  }
+  .cta{
+    display:block; width:100%; text-align:center; text-decoration:none;
+    font-size:15.5px; font-weight:700; letter-spacing:.1em;
+    color:#E9E7DE; background:#263334; border-radius:999px; padding:14px 20px; margin-top:22px;
+  }
+  .micro{font-size:11.5px; color:#8b8778; text-align:center; line-height:2; margin-top:16px}
+  footer{max-width:520px; margin:0 auto; padding:4px 20px 26px; text-align:center; font-size:10.5px; color:#8b8778; line-height:2}
+  footer a{color:#8b8778}
+</style>
+</head>
+<body>
+<div id="wrap">
+  <h1>開課行程</h1>
+  <div class="sub">ETHAN 老 師 ・ 照 亮 心 靈 角 落</div>
+  <div class="rule"></div>
+  <div id="list"></div>
+  <a class="cta" href="https://www.facebook.com/profile.php?id=100054484583929" target="_blank" rel="noopener">私訊粉專詢問・報名</a>
+  <p class="micro">行程若有異動,以本頁為準。想收到開課通知,追蹤粉專就不會錯過。</p>
+</div>
+<footer>
+  <a href="https://www.facebook.com/profile.php?id=100054484583929" target="_blank" rel="noopener">Ethan老師 照亮心靈角落</a>
+  ・ <a href="https://sites.google.com/view/lifehyposis" target="_blank" rel="noopener">LifeHypnosis 網站</a>
+</footer>
+
+<script>
+/* 行程資料:來源=Ethan 的教學日曆(照亮角落的地圖),粉絲版文案由小編室維護。
+   status: open=報名中 / full=額滿 / closed=包班(不公開招生) */
+var COURSES = [
+  {from:"2026-08-22", to:"2026-08-22", name:"我的時間,我作主|數位生存訓練營",
+   place:"高雄", status:"closed",
+   desc:"給青少年的一日課:看見自己與手機的關係,把時間的主導權拿回來。本梯為協會包班。"},
+  {from:"2026-08-28", to:"2026-08-30", name:"NGH 催眠師資班(三日)",
+   place:"", status:"open",
+   desc:"NGH 國際催眠師認證系統課程。詳情與報名方式請私訊粉專。"},
+  {from:"2026-09-04", to:"2026-09-06", name:"NGH 催眠師資班(三日)第二梯",
+   place:"", status:"open",
+   desc:"NGH 國際催眠師認證系統課程。詳情與報名方式請私訊粉專。"},
+  {from:"2026-09-12", to:"2026-09-12", name:"影響力工作坊",
+   place:"高雄", status:"open",
+   desc:"一天的影響力課:讓你說的話,真的進到別人心裡。詳情請私訊粉專。"},
+  {from:"2026-09-13", to:"2026-09-13", name:"說服力課程",
+   place:"中國文化大學推廣教育部", status:"open",
+   desc:"詳情與報名方式請私訊粉專。"}
+];
+
+function fmt(d){
+  var p = d.split("-");
+  var wd = ["日","一","二","三","四","五","六"][new Date(d + "T00:00:00+08:00").getDay()];
+  return p[1].replace(/^0/,"") + "/" + p[2].replace(/^0/,"") + "(" + wd + ")";
+}
+function render(){
+  var today = new Date();
+  today = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+  var html = "";
+  var shown = 0;
+  for (var i = 0; i < COURSES.length; i++) {
+    var c = COURSES[i];
+    var end = new Date(c.to + "T23:59:59+08:00");
+    if (end < today) continue; /* 過期自動消失 */
+    shown++;
+    var when = fmt(c.from) + (c.to !== c.from ? " – " + fmt(c.to) : "");
+    var year = c.from.slice(0,4);
+    var tag = c.status === "open" ? "<span class='tag open'>報名中</span>"
+            : c.status === "full" ? "<span class='tag full'>已額滿</span>"
+            : "<span class='tag closed'>包班</span>";
+    html += "<div class='card'>"
+      + "<div class='when'>" + year + " 年 " + when + "</div>"
+      + "<div class='cname'>" + c.name + tag + "</div>"
+      + (c.place ? "<div class='meta'>📍 " + c.place + "</div>" : "")
+      + (c.desc ? "<div class='desc'>" + c.desc + "</div>" : "")
+      + "</div>";
+  }
+  if (!shown) html = "<div class='empty'>近期課程籌備中——<br>追蹤粉專,開課第一時間通知你。</div>";
+  document.getElementById("list").innerHTML = html;
+}
+render();
+</script>
+</body>
+</html>
